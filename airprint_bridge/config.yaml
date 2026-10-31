@@ -1,0 +1,36 @@
+name: AirPrint Bridge
+version: "0.3.0"
+slug: airprint_bridge
+description: Makes an older AirPrint printer show up on current iPhones and iPads again, and offers its scanner via AirScan
+url: https://github.com/CHANGE_ME/airprint
+arch:
+  - aarch64
+  - amd64
+startup: services
+boot: auto
+init: false
+# mDNS (Bonjour) needs the host network to reach phones on the LAN.
+host_network: true
+# Uncomment once the GitHub workflow has published images, so the Pi doesn't compile Rust:
+# image: ghcr.io/CHANGE_ME/airprint-bridge-{arch}
+options:
+  printer_port: 631
+  printer_path: /ipp/print
+  name: AirPrint Bridge
+  mode: proxy
+  port: 631
+  scanner: true
+  scan_port: 8090
+schema:
+  printer_host: str?
+  printer_match: str?
+  printer_port: port
+  printer_path: str
+  name: str
+  mode: list(proxy|advertise_only)
+  port: port
+  color: bool?
+  duplex: bool?
+  urf: str?
+  scanner: bool
+  scan_port: port

@@ -1,0 +1,45 @@
+configuration:
+  printer_host:
+    name: Printer IP address
+    description: >-
+      Leave empty to find the printer automatically via Bonjour and follow it when its IP changes.
+      Set an IP (e.g. 192.168.178.200) to skip discovery.
+  printer_match:
+    name: Printer name match
+    description: >-
+      Only needed if several printers are on the network: part of the printer's Bonjour name, e.g. "M267x".
+      The add-on log lists the printers it found.
+  printer_port:
+    name: Printer IPP port
+    description: Usually 631. Only used with a manual printer IP.
+  printer_path:
+    name: Printer IPP path
+    description: Usually /ipp/print. Only used with a manual printer IP or when the printer's Bonjour record has no "rp" value.
+  name:
+    name: Printer name
+    description: Name shown in the iPhone's print dialog.
+  mode:
+    name: Mode
+    description: >-
+      proxy relays print jobs through Home Assistant and fixes the printer's attributes (recommended).
+      advertise_only only publishes a clean Bonjour record pointing straight at the printer.
+  port:
+    name: Proxy port
+    description: Port the proxy listens on in proxy mode.
+  color:
+    name: Color
+    description: Override whether the printer is advertised as color.
+  duplex:
+    name: Duplex
+    description: Override whether the printer is advertised as two-sided.
+  urf:
+    name: URF capabilities
+    description: Override the Apple Raster capabilities, e.g. W8,RS600,CP1,DM1,V1.4.
+  scanner:
+    name: AirScan
+    description: >-
+      Offer the printer's scanner (Samsung network scan, port 9400) as an AirScan/eSCL scanner
+      for macOS (Image Capture, Preview) and eSCL-capable apps.
+  scan_port:
+    name: AirScan port
+    description: Port of the AirScan (eSCL) server.
