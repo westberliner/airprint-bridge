@@ -58,3 +58,7 @@ Check the add-on log: it prints the TXT record it advertises.
 - **Listed but printing fails in `advertise_only`:** switch to `proxy`.
 - **Scanner not listed on the Mac:** the log must show `advertising "…" as AirScan scanner`. A
   `no scanner at …` warning means the printer's scan service didn't answer on port 9400.
+
+## License
+
+MIT. This software is based in part on the work of the Independent JPEG Group (via the `jpeg-encoder` crate).

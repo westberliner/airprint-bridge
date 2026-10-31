@@ -45,3 +45,8 @@ cargo run -- scan-test 192.168.178.200 out.pdf 300 color   # one scan straight f
 SCAN_DEBUG=1 cargo run -- scan-test …                      # trace the scanner protocol
 make -C .. dist             # prebuilt aarch64 app for a local install in dist/airprint_bridge
 ```
+
+## License
+
+MIT, see [LICENSE](LICENSE). This software is based in part on the work of the Independent JPEG Group
+(via the `jpeg-encoder` crate).
